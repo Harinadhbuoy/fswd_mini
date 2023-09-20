@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import "../../styles/login_css/login.css";
+import "../../styles/login_signup_css/login.css";
 import logo from "../../assets/images/wallpaper.jpg";
 
 
@@ -24,8 +24,6 @@ const Login = () => {
   const handleSubmit= (e)=>
   {
     e.preventDefault();
-    console.log("harinadhbuoy");
-    navigate('/dashboard');
   }
 
 
@@ -89,7 +87,7 @@ const Login = () => {
                 <input type="password" value= {pass_word} placeholder="Enter your password" onChange={(e) => setPass_word(e.target.value)}  required></input>
               </div>
               <div class="input-box">
-                <input type="password" value= {confirm_password} placeholder="confirm password" onChange={(e) => confirm_password(e.target.value)} required></input>
+                <input type="password" value= {confirm_password} placeholder="confirm password" onChange={(e) => setConfirm_password(e.target.value)} required></input>
               </div>
               <div class="button input-box">
                 <input type="submit" value="Sumbit"></input>

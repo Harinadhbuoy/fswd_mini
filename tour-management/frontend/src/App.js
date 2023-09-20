@@ -2,17 +2,45 @@ import './App.css';
 import Login from './components/login_signup/login';
 // import Signup from './components/signup/signup';
 import {BrowserRouter,Routes,Route} from "react-router-dom"
+import Userdashboard from './layouts/userdashboard/userdashboard';
+import AdminHomePage from './components/admin_components/adminhome/adminhome';
+import ManageTourPackages from './components/admin_components/adminmanage/adminmanage';
+import Admindashboard from './layouts/admindashboard/admindashboard';
 
 function App() {
   return (
     <div className="App">
-       <BrowserRouter>
+      <BrowserRouter>
        <Routes>
        <Route path="/" element={<Login/>} /> 
+       <Route path="/userdashboard" Component={Userdashboard}/>
+       <Route path="/admindashboard" Component={Admindashboard}/>
        </Routes>
      </BrowserRouter>
-    </div>
+    </div>  
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <BrowserRouter>
+       <Routes>
+       <Route path="/" element={<Login/>} /> 
+       <Route path="/userHomePage" Component={userHomePage}/>
+       </Routes>
+     </BrowserRouter> */
