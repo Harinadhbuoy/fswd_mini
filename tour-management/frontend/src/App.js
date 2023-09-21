@@ -6,6 +6,7 @@ import Userdashboard from './layouts/userdashboard/userdashboard';
 import AdminHomePage from './components/admin_components/adminhome/adminhome';
 import ManageTourPackages from './components/admin_components/adminmanage/adminmanage';
 import Admindashboard from './layouts/admindashboard/admindashboard';
+import TourForm from './components/admin_components/addtourpackage/addtourpackage';
 
 function App() {
   return (
@@ -15,8 +16,10 @@ function App() {
        <Route path="/" element={<Login/>} /> 
        <Route path="/userdashboard" Component={Userdashboard}/>
        <Route path="/admindashboard" Component={Admindashboard}/>
+       <Route path="/addtourpackage" Component={TourForm}/>
        </Routes>
      </BrowserRouter>
+     {/* <TourForm/> */}
     </div>  
   );
 }

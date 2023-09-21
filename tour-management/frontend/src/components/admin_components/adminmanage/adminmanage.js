@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import TourForm from '../addtourpackage/addtourpackage';
+import { Link } from 'react-router-dom';
 
 const ManageTourPackages = () => {
   const [accordionOpen, setAccordionOpen] = useState(true);
@@ -62,7 +64,7 @@ const ManageTourPackages = () => {
           </div>
         )}
       </div>
-      <button onClick={toggleAccordion} className="my-btn">
+      <button onClick = {<Link to ={TourForm}></Link>} className="my-btn">
         Add
       </button>
     </div>
